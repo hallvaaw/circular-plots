@@ -1,65 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <script src='circos.min.js'></script>
-    <title></title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<div id='chart'></div>
-<script>
-var myCircos = new Circos({
-  container: '#chart',
-  width: 1000,
-  height: 1000,
-});   
-
-var configuration = {
-  innerRadius: 300,
-  outerRadius: 400,
-  cornerRadius: 2,
-  gap: 0.001,
-  labels: {
-	display: true,
-	position: 'center',
-	size: '14px',
-	color: '#000000',
-	radialOffset: -20,
-  },
-  ticks: {
-	display: false,
-  },
-  events: {}
-};
-
-var data = [
-    { len: 2148243458, label: "1", id: "1", color: "#E41A1C" },
-    { len: 1871701781, label: "2", id: "2", color: "#377EB8" },
-    { len: 1444486004, label: "3", id: "3", color: "#4DAF4A" },
-    { len: 1366768940, label: "4", id: "4", color: "#984EA3" },
-    { len: 1350370643, label: "5", id: "5", color: "#FF7F00" },
-    { len: 1157796704, label: "6", id: "6", color: "#FFFF33" },
-    { len: 1135458799, label: "7", id: "7", color: "#A65628" },
-    { len: 949874100, label: "8", id: "8" , color: "#F781BF" },
-    { len: 831016897, label: "9", id: "9" , color: "#999999" },
-    { len: 776079957, label: "10", id: "10", color: "#66C2A5" },
-    { len: 716073983, label: "11", id: "11", color: "#FC8D62" },
-    { len: 677002197, label: "12", id: "12", color: "#8DA0CB" },
-    { len: 635888917, label: "13", id: "13", color: "#E78AC3" },
-    { len: 557810552, label: "14", id: "14", color: "#A6D854" },
-    { len: 554534538, label: "15", id: "15", color: "#FFD92F" },
-    { len: 443118947, label: "16", id: "16", color: "#E5C494" },
-    { len: 441095673, label: "17", id: "17", color: "#B3B3B3" },
-    { len: 413575244, label: "18", id: "18", color: "#8DD3C7" },
-    { len: 147689202, label: "19", id: "19", color: "#FFFFB3" },
-    { len: 2267737603, label: "X", id: "X", color: "#BEBADA" },
-    { len: 13037589, label: "Y", id: "Y", color: "#FB8072" }
-];
-
-myCircos.layout(data, configuration);
-
-myCircos.render();
-
-</script>
+<body class="grid container bg-slate-600 justify-center">
+    <h2 class="text-3xl font-bold font-mono text-center">Circular plots</h2>
+    <div class="bg-gray-200 border rounded-lg mt-2">
+        <h1 class="text-2xl font-bold font-mono text-center">Mouse genome mm9</h1>
+        <div id="myDiv"></div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
+
